@@ -3,11 +3,11 @@ Description=Network Configuration Daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /etc/network_daemon/network_daemon.py
+ExecStart=/usr/bin/python3 network_daemon/network_daemon.py
 Restart=always
 User=nobody
 Group=nogroup
-WorkingDirectory=/etc/network_daemon/
+WorkingDirectory= network_daemon/
 StandardOutput=journal
 StandardError=journal
 
