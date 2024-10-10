@@ -1,0 +1,15 @@
+[Unit]
+Description=Network Configuration Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /etc/network_daemon/network_daemon.py
+Restart=always
+User=nobody
+Group=nogroup
+WorkingDirectory=/etc/network_daemon/
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
